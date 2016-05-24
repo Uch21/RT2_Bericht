@@ -1,0 +1,52 @@
+%--------------------------------------------------------------------
+%
+%Mustervorlage fuer eine Aufgabe
+%
+%--------------------------------------------------------------------
+%
+%Ueberschreiben der automatisch erzeugten Aufgabennummer
+%Die folgende Aufgabennummer ergibt sich aus dem Stand des
+%Zählers + 1
+%\setcounter{chapter}{0}
+%
+\chapter{Beschreibung der Übertragungsfunktionen}\label{ex:uebertrag}
+%
+%Teilaufgabe 1
+%
+\section{Regelstrecke}\label{sec:einsinnvolleslabel2}
+%
+Ausgehend von dem Gleichgewicht der Kräfte $F_Z + F_R - m*g - m*a = 0$\\
+Daraus ergibt sich folgende Differentialgleichung:
+\begin{equation}
+	\frac{32\mu_0 l^*}{\rho v D^{*^2}} \rho v^2 A + 6\pi \mu_0 vr - mg = m \ddot{x}
+\end{equation}
+Nach Kürzen ergibt sich:
+\begin{equation}
+\frac{32\mu_0}{D^*} v A + 6\pi\mu_0 vr - mg = m\ddot{x}
+\end{equation}
+Nach der Laplacetransformation erhält man:
+\begin{equation}
+\frac{32\mu_0}{D^*} v A + 6\pi\mu_0 vr - mg = m *\text{s}^2 x
+\end{equation}
+Umgestellt nach dem Weg:
+\begin{equation}
+\frac{1}{\text{s}^2} * (\frac{32\mu_0}{m D^*} v A + \frac{6\pi\mu_0 vr}{m} - g) = x
+\end{equation}
+%
+Das Ergebnis wird mittels Einheiten geprüft:
+\begin{equation}
+\frac{\mu_0 v A}{mD^*} = \frac{[Pa*s * m * m^2]}{[kg * m]} = \frac{[N * m^4 * s]}{[N * s^3 * m^3]} = \frac{[m]}{[s^2]}
+\end{equation}
+\begin{equation}
+	\frac{\mu_0 v r}{m} = \frac{[Pa*s*m*M]}{[kg*s]}
+\end{equation}
+%--------------------------------------------------------------------
+%
+%Teilaufgabe 2
+%
+\section{}\label{sec:einsinnvolleslabel3}
+%
+
+%
+%Alle bisherigen Bilder einfügen und einen Seitenumbruch erzwingen
+\clearpage

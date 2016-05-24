@@ -3,7 +3,7 @@
 
 
 
-
+%
 \section{Mechanischer Aufbau}\label{sec:mechanischer_Aufbau}
 	\subsection{Stückliste}
 	\begin{enumerate}
@@ -18,25 +18,67 @@
 		\item Patex 2K Kleber
 		\item Sekundenkleber
 	\end{enumerate}
-	\begin{figure}[htb]
-		\centering
-		\includegraphics[width=0.8\linewidth]{./Bilder/IMG_20160517_152455}
-		\caption{Fertiger mechanischer Aufbau}
-		\label{fig:Aufbau_gesamt}
-	\end{figure}
-\enlargethispage{2em}
 \subsection{Beschreibung}
-Die Plexiglasscheibe dient als Basis des gesamten mechanischen Aufbaus. In ihrer Mitte befindet sich ein Loch durch welcher das HT-Rohr, bis zur Dichtungsverbreiterungs, genau durchpasst. Obwohl das HT-Rohr schon durch eine Presspassung in der Plexiglasscheibe hält wurde es zusätzlich mit Zweikkomponentenkleber fixiert. In die vier Ecken der Scheibe wurde Löcher gebohrt, durch diese wurden die Schrauben gesteckt und mit den Mutter sowie den Unterlagsscheiben fixiert. Die Schrauben dienen Als Füße für den Aufbau. Dies hat fogende Vorteile:
+Die Plexiglasscheibe dient als Basis des gesamten mechanischen Aufbaus (siehe Abb. \ref{fig:Aufbau_gesamt}). In ihrer Mitte befindet sich ein Loch durch welcher das HT-Rohr, bis zur Dichtungsverbreiterungs, genau durchpasst. Obwohl das HT-Rohr schon durch eine Presspassung in der Plexiglasscheibe hält wurde es zusätzlich mit Zweikkomponentenkleber fixiert. In die vier Ecken der Scheibe wurde Löcher gebohrt, durch diese wurden die Schrauben gesteckt und mit den Mutter sowie den Unterlagsscheiben fixiert. Die Schrauben dienen Als Füße für den Aufbau. Dies hat fogende Vorteile:
 \begin{itemize}
 		\item Der Lüfter liegt nicht dirkt auf dem Untergrund und kann somit Luft ansaugen.
 		\item Der Aufbau steht stabil auf dem Untergrund.
 		\item Durch die Verwendung von Schrauben kann ein unebener Untergrund ausgeglichen werden.
 \end{itemize}
-In die Verbreiterung des HT-Rohrs befindet sich normalerweise eine Gummidichtung. In unserem Fall kann dort aber der Lüfter bequem eingeclipst werden. Auf dem Lüfter wurde der Abstandssensor mit Sekundenkleber befestigt. Da der Sensor einen Steckanschluss hat und dieser im fertigen Aufbau nicht mehr erreicht werden kann, wurde dieser mit Litzen, am Lüfter vorbei unten aus dem HT-Rohr geführt.\\
-	\begin{figure}[htb]
-			\centering
-			\includegraphics[width=0.7\linewidth]{./Bilder/Luefter_mit_Sensor_im_Rohr}
-			\caption{Lüfter mit Sensor im HT-Rohr}
-			\label{fig:IMG_20160523_191318}
-	\end{figure}
-In das andere Ende des HT-Rohrs wird das Plexiglas Rohr gesteckt werden, dieses passt ebenfalls genau dort hinein und ist somit durch eine Presspassung fixiert.
+
+In die Verbreiterung des HT-Rohrs befindet sich normalerweise eine Gummidichtung. In unserem Fall kann dort aber der Lüfter bequem eingeclipst werden. Auf dem Lüfter wurde der Abstandssensor mit Sekundenkleber befestigt. Da der Sensor einen Steckanschluss hat und dieser im fertigen Aufbau nicht mehr erreicht werden kann, wurde dieser mit Litzen, am Lüfter vorbei unten aus dem HT-Rohr geführt. In das andere Ende des HT-Rohrs wird das Plexiglas Rohr gesteckt werden, dieses passt ebenfalls genau dort hinein und ist somit durch eine Presspassung fixiert (siehe Abb. \ref{fig:IMG_20160523_191318}).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\linewidth]{./Bilder/IMG_20160517_152455}
+	\label{fig:Aufbau_gesamt}
+	\caption{Fertiger mechanischer Aufbau}
+\end{figure}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\linewidth]{./Bilder/Luefter_mit_Sensor_im_Rohr}
+	\caption{Lüfter mit Sensor im HT-Rohr}
+	\label{fig:IMG_20160523_191318}
+\end{figure}
+%
+
+\section{Elektrischer Aufbau}\label{sec:elAufbau}
+%
+\subsection{Die Schaltung}\label{ssc:schaltung}
+%
+Der Schaltplan wird auf Abb. \ref{fig:schaltplan} dargestellt.
+Der Abstandssensor ist über die Steckverbindung J11 mit der Platine verbunden. Versorgt wird der Sensor mit einer Spannung von 5V, die über den USB Stecker J10 geliefert wird. Die Widerstände R1 bis R4 bilden zusammen mit dem Operationsverstärker IC1 einen Differenzverstärker, der die Spannung am Ausgang des Abstandssensors für das Mikrocontrollerboard entkoppelt.\\
+Der Operationsverstärker wird mit einer Spannung von 3,3V versorgt, die vom Mikrocontrollerboard über J1 geliefert wird. Der Ausgang des OPs am Pin 1 des IC1 ist mit dem AD-Wandler Eingang ADCA1 des Controllers verbunden, um das Messsignal zu digitalisieren.\\
+Da der Lüfter mit 5V betrieben wird und zu viel Strom benötigt, den der Mikrocontroller nicht liefern kann, wird er über einen Optokoppler betrieben. Der Mikrocontroller liefert ein PWM Signal am Ausgang EPWM1A an J6, das dann über den Vorwiderstand R5 den Optokoppler IC2 ansteuert. Am Ausgang des Optokopplers ist der Lüfter über J12 angeschlossen.\\
+\\
+Die Maße der Platine sind gleich groß, wie die das Mikrocontrollerboard, sodass es genau auf die Entkopplungsplatine aufgesetzt werden kann. Über die Buchsen J1, J2, J5 und J6 werden die nötigen Verbindungen zwischen der Entkopplungsplatine und dem Mikrocontrollerborad hergestellt und dienen gleichzeitig als mechanischen Halt, sodass zwischen Mikrocontrollerboard und der Entkopplungsplatine keine zusätzlichen Schrauben oder Ähnliches mehr notwendig sind.\\
+\\
+Das Mikrocontrollerboard wird über ein Mini USB Kabel sowohl mit Strom versorgt, als auch die Verbindung um den Controller zu programmieren, hergestellt. Die Entkopplungsplatine wird über ein USB A Stecker mit einer USB Spannungsquelle, wie zum Beispiel einem Ladegerät, verbunden.
+%
+\begin{figure}[htb]
+	\includegraphics[width = \linewidth]{./Bilder/schaltplan}
+	\caption{Schaltplan mit Pinout}
+	\label{fig:schaltplan}
+\end{figure}
+\subsection{Das Layout}\label{ssc:layout}
+%
+Die Schaltung ist auf einer Lochrasterplatine realisiert und die Leiterbahnen mit Silberdraht gelötet (siehe Abb. \ref{fig:layout}). Das Layout ist so gewählt, dass möglichst wenige Kreuzungen entstehen um Brücken auf der Bestückungsseite zu vermeiden. Da von J1, J2 J5 und J6 nicht alle Pins benötigt werden, sind auch nur die nötigsten Stiftleisten aufgelötet. Die Lochrasterplatine mit Controller kann auf Abb. \ref{fig:platContr} betrachtet werden.
+
+%
+\begin{figure}[htb]
+	\includegraphics[width = 0.8\linewidth]{./Bilder/Layout}
+	\caption{Lochrasterplatine Rückseite}
+	\label{fig:layout}
+\end{figure}
+
+\begin{figure}[htb]
+	\includegraphics[width = 0.8\linewidth]{./Bilder/Bestueckung}
+	\caption{Lochrasterplatine Bestückungsseite}
+	\label{fig:bestückungsseite}
+\end{figure}
+
+\begin{figure}[htb]
+	\includegraphics[width = \linewidth]{./Bilder/Platine_mit_Controller}
+	\caption{Lochrasterplatine mit Controller}
+		\label{fig:platContr}
+\end{figure}
