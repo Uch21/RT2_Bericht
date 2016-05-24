@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.22)  23 MAY 2016 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.26)  24 MAY 2016 08:24
 entering extended mode
 **./RT2_Bericht_main.tex
 (RT2_Bericht_main.tex
@@ -885,9 +885,9 @@ Package pdftex.def Info: ./Bilder/Silhouette_HSRT_045K.jpg used on input line 1
 (pdftex.def)             Requested size: 469.47046pt x 18.4034pt.
  [1
 
-{C:/Users/admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Bilder/Lo
-go_HSRT_TEC_RGB.png> <./Bilder/Logo_HSRT_Schwarz.jpg> <./Bilder/Silhouette_HSRT
-_045K.jpg>] [2] (chapter1.tex
+{C:/Users/adminLen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Bilder
+/Logo_HSRT_TEC_RGB.png> <./Bilder/Logo_HSRT_Schwarz.jpg> <./Bilder/Silhouette_H
+SRT_045K.jpg>] [2] (chapter1.tex
 Kapitel 1.
 <./Bilder/Blockschaltbild.pdf, id=57, 666.99188pt x 246.1697pt>
 File: ./Bilder/Blockschaltbild.pdf Graphic file (type pdf)
@@ -925,13 +925,6 @@ Kapitel 3.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
-
 <./Bilder/IMG_20160517_152455.jpg, id=89, 3276.24pt x 2457.18pt>
 File: ./Bilder/IMG_20160517_152455.jpg Graphic file (type jpg)
 
@@ -939,6 +932,13 @@ File: ./Bilder/IMG_20160517_152455.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./Bilder/IMG_20160517_152455.jpg used on input line 17
 .
 (pdftex.def)             Requested size: 375.57779pt x 281.65117pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
 
 <./Bilder/Luefter_mit_Sensor_im_Rohr.jpg, id=90, 1186.4325pt x 1236.11812pt>
 File: ./Bilder/Luefter_mit_Sensor_im_Rohr.jpg Graphic file (type jpg)
@@ -963,9 +963,9 @@ Package rerunfilecheck Info: File `RT2_Bericht_main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 19732 strings out of 493634
- 385079 string characters out of 3141314
- 456379 words of memory out of 3000000
+ 19742 strings out of 493634
+ 385140 string characters out of 3141305
+ 457379 words of memory out of 3000000
  22696 multiletter control sequences out of 15000+200000
  19404 words of font info for 53 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -977,9 +977,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on RT2_Bericht_main.pdf (6 pages, 2690135 bytes).
+Output written on RT2_Bericht_main.pdf (6 pages, 2692131 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 
