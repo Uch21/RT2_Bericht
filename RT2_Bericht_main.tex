@@ -1,10 +1,11 @@
 \documentclass[11pt,a4paper,twoside,final]{report}
 %
+
 \usepackage{ngerman}            %Neue Rechtschreibung
 \usepackage{graphicx}           %Graphiken einbinden
 \usepackage[normalsize]{subfigure}
-\usepackage{fontenc}            %Verwenden von \"{o} \"{a} \"{u} {\ss}
-\usepackage[latin1]{inputenc}   %Verwenden von \"{o} \"{a} \"{u} {\ss}
+\usepackage[T1]{fontenc}            %Verwenden von \"{o} \"{a} \"{u} {\ss}
+\usepackage[Latin1]{inputenc}   	%Verwenden von ä, ö, ü, ß
 \usepackage{fancyhdr}           %Kopf-und Fusszeilen
 \usepackage{theorem}
 \usepackage{amsmath}
@@ -16,8 +17,9 @@
 \usepackage[right]{eurosym}
 \usepackage{pdflscape}
 \usepackage[compact]{titlesec}
-
 \usepackage{tikz}
+\usepackage{lmodern}
+
 \usetikzlibrary{positioning}
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes.geometric}
@@ -58,7 +60,7 @@
 %
 %\titleformat{\chapter}[hang]{\normalfont{}\bfseries}{\thechapter}{10pt}{\large}{}
 %\renewcommand{\thesection}{\alph{section}}
-\titleformat{\section}[runin]{\normalfont}{\thesection )}{6pt}{}
+%\titleformat{\section}[runin]{\normalfont}{\thesection )}{6pt}{}
 %
 %--------------------------------------------------------------------
 %
@@ -145,6 +147,7 @@ Datum:~\VDatum			      &\multicolumn{2}{|l|}{Testat:}		\\
 \input{chapter1}
 \input{chapter2}
 \input{chapter3}
+\input{chapter4}
 %
 %und möglicherweise noch andere Aufgaben
 %
